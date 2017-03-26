@@ -1,0 +1,326 @@
+Release 9.2i - xst J.36
+Copyright (c) 1995-2007 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to ./xst/projnav.tmp
+CPU : 0.00 / 0.07 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Parameter xsthdpdir set to ./xst
+CPU : 0.00 / 0.07 s | Elapsed : 0.00 / 0.00 s
+ 
+--> Reading design: mips.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+     9.1) Device utilization summary
+     9.2) Partition Resource Summary
+     9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "mips.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "mips"
+Output Format                      : NGC
+Target Device                      : xc3s400-4-ft256
+
+---- Source Options
+Top Module Name                    : mips
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : lut
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : YES
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : YES
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Library Search Order               : mips.lso
+Keep Hierarchy                     : NO
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "D:/SOC/mips/MUX2V5.vhd" in Library work.
+Architecture behavioral of Entity mux2v5 is up to date.
+Compiling vhdl file "D:/SOC/mips/PC_Update.vhd" in Library work.
+Architecture behavioral of Entity pc_update is up to date.
+Compiling vhdl file "D:/SOC/mips/ProgCnt.vhd" in Library work.
+Architecture behavioral of Entity progcnt is up to date.
+Compiling vhdl file "D:/SOC/mips/ROM32x32.vhd" in Library work.
+Architecture behavioral of Entity rom32x32 is up to date.
+Compiling vhdl file "D:/SOC/mips/mips.vhf" in Library work.
+Architecture behavioral of Entity mips is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <mips> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <MUX2V5> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <PC_Update> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ProgCnt> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <ROM32x32> in library <work> (architecture <behavioral>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <mips> in library <work> (Architecture <behavioral>).
+Entity <mips> analyzed. Unit <mips> generated.
+
+Analyzing Entity <MUX2V5> in library <work> (Architecture <behavioral>).
+Entity <MUX2V5> analyzed. Unit <MUX2V5> generated.
+
+Analyzing Entity <PC_Update> in library <work> (Architecture <behavioral>).
+Entity <PC_Update> analyzed. Unit <PC_Update> generated.
+
+Analyzing Entity <ProgCnt> in library <work> (Architecture <behavioral>).
+Entity <ProgCnt> analyzed. Unit <ProgCnt> generated.
+
+Analyzing Entity <ROM32x32> in library <work> (Architecture <behavioral>).
+Entity <ROM32x32> analyzed. Unit <ROM32x32> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <MUX2V5>.
+    Related source file is "D:/SOC/mips/MUX2V5.vhd".
+Unit <MUX2V5> synthesized.
+
+
+Synthesizing Unit <PC_Update>.
+    Related source file is "D:/SOC/mips/PC_Update.vhd".
+WARNING:Xst:2734 - Property "use_dsp48" is not applicable for this technology.
+    Found 32-bit adder for signal <New_PC>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <PC_Update> synthesized.
+
+
+Synthesizing Unit <ProgCnt>.
+    Related source file is "D:/SOC/mips/ProgCnt.vhd".
+    Found 32-bit register for signal <PC>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <ProgCnt> synthesized.
+
+
+Synthesizing Unit <ROM32x32>.
+    Related source file is "D:/SOC/mips/ROM32x32.vhd".
+    Found 32x32-bit ROM for signal <Data$rom0000> created at line 77.
+    Summary:
+	inferred   1 ROM(s).
+Unit <ROM32x32> synthesized.
+
+
+Synthesizing Unit <mips>.
+    Related source file is "D:/SOC/mips/mips.vhf".
+WARNING:Xst:646 - Signal <Instr<31:21>> is assigned but never used.
+WARNING:Xst:646 - Signal <Instr<10:0>> is assigned but never used.
+WARNING:Xst:653 - Signal <RegDest> is used but never assigned. Tied to value 0.
+WARNING:Xst:646 - Signal <WrReg> is assigned but never used.
+Unit <mips> synthesized.
+
+WARNING:Xst:524 - All outputs of the instance <U_MUXRegD> of the block <MUX2V5> are unconnected in block <mips>.
+   This instance will be removed from the design along with all underlying logic
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 32x32-bit ROM                                         : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Registers                                            : 1
+ 32-bit register                                       : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+WARNING:Xst:524 - All outputs of the instance <U_New_PC> of the block <PC_Update> are unconnected in block <mips>.
+   This instance will be removed from the design along with all underlying logic
+WARNING:Xst:524 - All outputs of the instance <U_PC> of the block <ProgCnt> are unconnected in block <mips>.
+   This instance will be removed from the design along with all underlying logic
+WARNING:Xst:524 - All outputs of the instance <U_ROM> of the block <ROM32x32> are unconnected in block <mips>.
+   This instance will be removed from the design along with all underlying logic
+Loading device for application Rf_Device from file '3s400.nph' in environment D:\Xilinx 9.2i.
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <mips> ...
+
+Optimizing unit <ProgCnt> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block mips, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Found no macro
+=========================================================================
+
+=========================================================================
+*                          Partition Report                             *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : mips.ngr
+Top Level Output File Name         : mips
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : NO
+
+Design Statistics
+# IOs                              : 1
+
+Cell Usage :
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s400ft256-4 
+
+ Number of Slices:                       0  out of   3584     0%  
+ Number of IOs:                          1
+ Number of bonded IOBs:                  0  out of    173     0%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+No clock signals found in this design
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: No path found
+   Minimum input arrival time before clock: No path found
+   Maximum output required time after clock: No path found
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+CPU : 2.91 / 3.01 s | Elapsed : 3.00 / 3.00 s
+ 
+--> 
+
+Total memory usage is 167784 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    9 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -1,0 +1,10 @@
+AR rom32x32 behavioral D:/SOC/mips/ROM32x32.vhd sub00/vhpl05 1490430351
+EN mux2v5 NULL D:/SOC/mips/MUX2V5.vhd sub00/vhpl06 1490430344
+EN rom32x32 NULL D:/SOC/mips/ROM32x32.vhd sub00/vhpl04 1490430350
+EN pc_update NULL D:/SOC/mips/PC_Update.vhd sub00/vhpl02 1490430346
+AR mips behavioral D:/SOC/mips/mips.vhf sub00/vhpl09 1490430353
+EN progcnt NULL D:/SOC/mips/ProgCnt.vhd sub00/vhpl00 1490430348
+EN mips NULL D:/SOC/mips/mips.vhf sub00/vhpl08 1490430352
+AR progcnt behavioral D:/SOC/mips/ProgCnt.vhd sub00/vhpl01 1490430349
+AR mux2v5 behavioral D:/SOC/mips/MUX2V5.vhd sub00/vhpl07 1490430345
+AR pc_update behavioral D:/SOC/mips/PC_Update.vhd sub00/vhpl03 1490430347

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="Xst" num="2734" delta="unknown" >Property &quot;<arg fmt="%s" index="1">use_dsp48</arg>&quot; is not applicable for this technology.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">Instr&lt;31:21&gt;</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">Instr&lt;10:0&gt;</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="653" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">RegDest</arg>&gt; is used but never assigned. Tied to value <arg fmt="%s" index="2">0</arg>.
+</msg>
+
+<msg type="warning" file="Xst" num="646" delta="unknown" >Signal &lt;<arg fmt="%s" index="1">WrReg</arg>&gt; is assigned but never used.
+</msg>
+
+<msg type="warning" file="Xst" num="524" delta="unknown" >All outputs of the instance &lt;<arg fmt="%s" index="1">U_MUXRegD</arg>&gt; of the block &lt;<arg fmt="%s" index="2">MUX2V5</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">mips</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
+</msg>
+
+<msg type="warning" file="Xst" num="524" delta="unknown" >All outputs of the instance &lt;<arg fmt="%s" index="1">U_New_PC</arg>&gt; of the block &lt;<arg fmt="%s" index="2">PC_Update</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">mips</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
+</msg>
+
+<msg type="warning" file="Xst" num="524" delta="unknown" >All outputs of the instance &lt;<arg fmt="%s" index="1">U_PC</arg>&gt; of the block &lt;<arg fmt="%s" index="2">ProgCnt</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">mips</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
+</msg>
+
+<msg type="warning" file="Xst" num="524" delta="unknown" >All outputs of the instance &lt;<arg fmt="%s" index="1">U_ROM</arg>&gt; of the block &lt;<arg fmt="%s" index="2">ROM32x32</arg>&gt; are unconnected in block &lt;<arg fmt="%s" index="3">mips</arg>&gt;.
+This instance will be removed from the design along with all underlying logic
+</msg>
+
+</messages>
+

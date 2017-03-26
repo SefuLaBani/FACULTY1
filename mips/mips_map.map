@@ -1,0 +1,32 @@
+Release 9.2i Map J.36
+Xilinx Map Application Log File for Design 'mips'
+
+Design Information
+------------------
+Command Line   : D:\Xilinx 9.2i\bin\nt\map.exe -ise D:/SOC/mips/mips.ise
+-intstyle ise -p xc3s400-ft256-4 -cm area -pr b -k 4 -c 100 -o mips_map.ncd
+mips.ngd mips.pcf 
+Target Device  : xc3s400
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.36 $
+Mapped Date    : Sat Mar 25 10:25:53 2017
+
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Running related packing...
+ERROR:Pack:198 - NCD was not produced. All logic was removed from design.  This
+   is usually due to having no input or output PAD connections in the design and
+   no nets or symbols marked as 'SAVE'.  You can either add PADs or 'SAVE'
+   attributes to the design, or run 'map -u' to disable logic trimming in the
+   mapper.
+
+Mapping completed.
+See MAP report file "mips_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   2

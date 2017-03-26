@@ -1,0 +1,62 @@
+Release 9.2i Map J.36
+Xilinx Mapping Report File for Design 'mips'
+
+Design Information
+------------------
+Command Line   : D:\Xilinx 9.2i\bin\nt\map.exe -ise D:/SOC/mips/mips.ise
+-intstyle ise -p xc3s400-ft256-4 -cm area -pr b -k 4 -c 100 -o mips_map.ncd
+mips.ngd mips.pcf 
+Target Device  : xc3s400
+Target Package : ft256
+Target Speed   : -4
+Mapper Version : spartan3 -- $Revision: 1.36 $
+Mapped Date    : Sat Mar 25 10:25:53 2017
+
+Design Summary
+--------------
+Number of errors   :   1
+Number of warnings :   2
+
+Section 1 - Errors
+------------------
+ERROR:Pack:198 - NCD was not produced. All logic was removed from design.  This
+   is usually due to having no input or output PAD connections in the design and
+   no nets or symbols marked as 'SAVE'.  You can either add PADs or 'SAVE'
+   attributes to the design, or run 'map -u' to disable logic trimming in the
+   mapper.
+
+Section 2 - Warnings
+--------------------
+WARNING:LIT:243 - Logical network N4 has no load.
+WARNING:LIT:395 - The above warning message base_net_load_rule is repeated 2
+   more times for the following (max. 5 shown):
+   N5,
+   Clk
+   To see the details of these warning messages, please use the -detail switch.
+
+Section 3 - Informational
+-------------------------
+INFO:MapLib:562 - No environment variables are currently set.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+   2 block(s) removed
+   2 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+The signal "N4" is loadless and has been removed.
+ Loadless block "XST_GND" (ZERO) removed.
+The signal "N5" is loadless and has been removed.
+ Loadless block "XST_VCC" (ONE) removed.

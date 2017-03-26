@@ -1,0 +1,9 @@
+sch2vhdl -intstyle ise -family spartan3 -flat -suppress -w "D:/SOC/mips/mips.sch" mips.vhf
+xst -ise "D:/SOC/mips/mips.ise" -intstyle ise -ifn mips.xst -ofn mips.syr
+xst -ise "D:/SOC/mips/mips.ise" -intstyle ise -ifn mips.xst -ofn mips.syr
+sch2vhdl -intstyle ise -family spartan3 -flat -suppress -w "D:/SOC/mips/mips.sch" mips.vhf
+sch2vhdl -intstyle ise -family spartan3 -flat -suppress -w "D:/SOC/mips/mips.sch" mips.vhf
+xst -ise "D:/SOC/mips/mips.ise" -intstyle ise -ifn mips.xst -ofn mips.syr
+ngdbuild -ise "D:/SOC/mips/mips.ise" -intstyle ise -dd _ngo -nt timestamp -i -p xc3s400-ft256-4 "mips.ngc" mips.ngd
+map -ise "D:/SOC/mips/mips.ise" -intstyle ise -p xc3s400-ft256-4 -cm area -pr b -k 4 -c 100 -o mips_map.ncd mips.ngd mips.pcf
+sch2vhdl -intstyle ise -family spartan3 -flat -suppress -w "D:/SOC/mips/mips.sch" mips.vhf
